@@ -14,8 +14,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import FileStorage.FileReading;
-import FileStorage.FileWriting;
+import dataManagement.DataSearching;
+import fileUtilities.FileReading;
+import fileUtilities.FileWriting;
 
 public class GoogleScrapper {
 
@@ -63,6 +64,14 @@ public class GoogleScrapper {
 		fr.readingFile(nameOfFile);
 		
 		driver.close();
+		
+		
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Need a site suggestion? Enter a keyword and we'll see if we have something relevant for you");
+		String requestedStr = scan.nextLine();
+		
+		fr.searchingString(requestedStr, nameOfFile);
 	}
 
 }

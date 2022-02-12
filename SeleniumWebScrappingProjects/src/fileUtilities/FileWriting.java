@@ -1,4 +1,4 @@
-package FileStorage;
+package fileUtilities;
 
 import java.io.File;
 import java.io.FileWriter;
