@@ -38,7 +38,7 @@ public class FileWriting {
 		fw.close();
 	}
 	
-	//To be used with the DataManipulation class so that it can rewrite the files data with newly sorted data
+	//To be used in conjunction with the DataManipulation class so that it can rewrite the files data with newly sorted data
 	public void reWriteToFile(ArrayList<String> links, String fileName) throws IOException {
 		FileWriter fw = new FileWriter(fileName);
 		BufferedWriter bw = new BufferedWriter(fw);
